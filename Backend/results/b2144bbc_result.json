@@ -1,0 +1,60 @@
+{
+  "id": "b2144bbc",
+  "filename": "Case diary - 999-2020.pdf",
+  "status": "completed",
+  "stages": [
+    {
+      "name": "upload",
+      "status": "completed",
+      "message": "File uploaded"
+    },
+    {
+      "name": "extract",
+      "status": "completed",
+      "message": "Text extracted successfully"
+    },
+    {
+      "name": "translate",
+      "status": "completed",
+      "message": "Translation complete"
+    },
+    {
+      "name": "analyze",
+      "status": "completed",
+      "message": "Analysis complete"
+    },
+    {
+      "name": "format",
+      "status": "completed",
+      "message": "Report generated"
+    }
+  ],
+  "created_at": "2026-02-26T13:43:27.925465",
+  "result": {
+    "Output_A": {
+      "FIR_Number": "999/2020",
+      "Date": "12/07/2020",
+      "Police_Station": "GHI",
+      "Accused_Details": "Unknown thieves",
+      "Victim_Details": "XYZ, aged 28 years",
+      "Incident_Facts": "Theft in mobile shop 'Maa Saraswati Telecom'",
+      "Legal_Sections": "Sections 379/461 IPC"
+    },
+    "Output_B": {
+      "crime_type": "theft_robbery",
+      "reason": "Sections 379/461 IPC match theft_robbery"
+    },
+    "Output_C": {
+      "theft_robbery": {
+        "FIR number and date": "\u2705 PRESENT - FIR No. 999/2020",
+        "Police station name": "\u2705 PRESENT - GHI Police Station",
+        "Place and time": "\u2705 PRESENT - LC 14 Railway Gate",
+        "Victim details": "\u2705 PRESENT - XYZ, 28 years",
+        "Stolen property": "\u2705 PRESENT - Rs. 8000, mobile phones",
+        "Recovery memo": "\u274c MISSING",
+        "Witness statements": "\u2705 PRESENT",
+        "Site plan": "\u2705 PRESENT"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "Output_A": {
+        "FIR_Number": "999/2020",
+        "Date": "12/07/2020",
+        "Police_Station": "GHI",
+        "Accused_Details": "Unknown thieves",
+        "Victim_Details": "XYZ, aged 28 years, son of ABC, resident of village DEF, Police Station GHI, District JKL",
+        "Incident_Facts": "On 12/07/2020, complainant XYZ discovered a theft in his mobile shop 'Maa Saraswati Telecom' located at LC 14 Railway Gate, Near ZZ Market. Thieves entered by opening the asbestos roof. Stolen items include Rs. 8000 cash, two new mobile phones (IMEI 000000000000000, 111111111111111, 222222222222222, 333333333333333), and five old mobile phones given for repair.",
+        "Legal_Sections": "Sections 379/461 IPC"
+    },
+    "Output_B": {
+        "crime_type": "theft_robbery",
+        "reason": "Sections 379/461 IPC directly match 'theft_robbery' typical sections (IPC 379)."
+    },
+    "Output_C": {
+        "theft_robbery": {
+            "FIR number and date": "✅ PRESENT - FIR No. 999/2020, dated 12/07/2020.",
+            "Police station name": "✅ PRESENT - GHI Police Station.",
+            "Place and time of occurrence": "✅ PRESENT - Incident discovered on 12/07/2020 at 9-9:30 AM at Maa Saraswati Telecom shop, LC 14 Railway Gate, Near ZZ Market. Theft occurred between 8 PM (11/07/2020) and discovery time.",
+            "Details of complainant and accused": "✅ PRESENT - Complainant: XYZ, s/o ABC, R/o DEF, PS GHI, Dist JKL; Accused: Unknown thieves.",
+            "Description of stolen property and value": "✅ PRESENT - Rs. 8000 cash, two new mobile phones (with IMEIs: 000000000000000, 111111111111111, 222222222222222, 333333333333333), and five old mobile phones given for repair.",
+            "Recovery/seizure memo of property": "❌ MISSING",
+            "Witness statements": "✅ PRESENT - Re-statement of complainant XYZ and statement of incident witness AAA (complainant's brother).",
+            "Site plan / spot inspection memo": "✅ PRESENT - Detailed description of the incident site (Maa Saraswati Telecom shop at LC 14 Railway Phark, ZZ Bazaar), surrounding shops, road directions, entry point (asbestos roof), and latitude/longitude are provided.",
+            "Arrest memo (if arrested)": "❌ MISSING",
+            "Chain of custody of recovered items": "❌ MISSING"
+        }
+    }
+}
