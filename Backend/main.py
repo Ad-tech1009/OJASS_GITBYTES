@@ -8,12 +8,18 @@ from datetime import datetime
 from typing import List, Dict
 import asyncio
 import sys
+from sentence_transformers import SentenceTransformer
+import numpy as np
+from pydantic import BaseModel
+from typing import Optional
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pipeline import process_chargesheet
 
 app = FastAPI(title="Chargesheet Processor")
-
+# Load embedding model once (local, no OpenAI)
+embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -30,11 +36,59 @@ os.makedirs(RESULTS_DIR, exist_ok=True)
 
 cases_db: Dict[str, dict] = {}
 
+class ChecklistItem(BaseModel):
+    status: str
+    detail: str
+    matched_text: Optional[str] = None
+    source_page: Optional[int] = None
+    similarity_score: Optional[float] = None
+
+
+class SimilarityRequest(BaseModel):
+    document_text: str
+    checklist: Dict[str, ChecklistItem]
+
+def cosine_similarity(vec1, vec2):
+    vec1 = np.array(vec1)
+    vec2 = np.array(vec2)
+    return float(np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2)))
 
 @app.get("/")
 async def root():
     return {"message": "Chargesheet Processor API"}
 
+@app.post("/compute-similarity")
+async def compute_similarity(payload: SimilarityRequest):
+    """
+    Compute cosine similarity between document text and each checklist item
+    using local sentence-transformer embeddings.
+    """
+
+    document_text = payload.document_text
+    checklist = payload.checklist
+
+    # Prepare all texts at once (efficient batch embedding)
+    texts = [document_text] + [
+        item.matched_text if item.matched_text else item.detail
+        for item in checklist.values()
+    ]
+
+    embeddings = embedding_model.encode(texts)
+
+    document_embedding = embeddings[0]
+    item_embeddings = embeddings[1:]
+
+    updated_checklist = {}
+
+    for (key, item), emb in zip(checklist.items(), item_embeddings):
+        similarity = cosine_similarity(document_embedding, emb)
+
+        updated_checklist[key] = {
+            **item.dict(),
+            "similarity_score": round(similarity, 4)
+        }
+
+    return updated_checklist
 
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
@@ -107,7 +161,9 @@ async def process_case(case_id: str, file_path: str):
         
         from phases.phase1_extraction import extract_pdf_text, save_extracted_json
         pages = extract_pdf_text(file_path)
-        
+        with open(os.path.join(RESULTS_DIR, f"{case_id}_extracted.txt"), "w", encoding="utf-8") as f:
+            json.dump(pages, f, indent=2, ensure_ascii=False)
+
         case["stages"][1]["status"] = "completed"
         case["stages"][1]["message"] = f"Extracted {len(pages)} pages"
         

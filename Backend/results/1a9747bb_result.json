@@ -1,0 +1,57 @@
+{
+  "id": "1a9747bb",
+  "filename": "Case diary - 999-2020.pdf",
+  "status": "completed",
+  "stages": [
+    {
+      "name": "upload",
+      "status": "completed",
+      "message": "File uploaded"
+    },
+    {
+      "name": "extract",
+      "status": "completed",
+      "message": "Extracted 28 pages"
+    },
+    {
+      "name": "translate",
+      "status": "completed",
+      "message": "Translated 28 pages"
+    },
+    {
+      "name": "analyze",
+      "status": "completed",
+      "message": "Analysis complete"
+    },
+    {
+      "name": "format",
+      "status": "completed",
+      "message": "Found 0 entities"
+    }
+  ],
+  "created_at": "2026-02-26T14:43:19.106507",
+  "result": {
+    "Output_A": {
+      "FIR_Number": "Error",
+      "Date": "Error",
+      "Police_Station": "Error",
+      "Accused_Details": "Error",
+      "Victim_Details": "Error",
+      "Incident_Facts": "Error",
+      "Legal_Sections": "Error"
+    },
+    "Output_B": {
+      "crime_type": "UNKNOWN",
+      "reason": "Analysis error: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information."
+    },
+    "Output_C": {},
+    "Output_D": {
+      "PERSON": [],
+      "LEGAL_SECTION": [],
+      "DATE_TIME": [],
+      "LOCATION": [],
+      "DOCUMENT": [],
+      "AMOUNT": []
+    }
+  }
+}

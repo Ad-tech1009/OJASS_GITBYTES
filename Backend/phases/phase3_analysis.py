@@ -8,7 +8,7 @@ import json
 import google.generativeai as genai
 from typing import Dict
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key="AIzaSyBW6drEIITG0GEnLSJLH2fPkhS2Gb2_x-w")
 
 
 def load_checklists(checklist_path: str = "checklists.json") -> Dict:
@@ -31,6 +31,7 @@ def analyze_case(english_text: str, checklists: Dict = None) -> Dict:
     if checklists is None:
         checklists = load_checklists()
     
+    # print(checklists)
     model = genai.GenerativeModel('gemini-2.5-flash')
     
     prompt = f"""
@@ -62,6 +63,9 @@ def analyze_case(english_text: str, checklists: Dict = None) -> Dict:
         # Clean potential markdown formatting from LLM response
         json_str = response.text.replace('```json', '').replace('```', '').strip()
         result = json.loads(json_str)
+        print(result)
+        # modification to add similarity_score to output_c
+        
         return result
     except Exception as e:
         print(f"Error in analysis: {e}")

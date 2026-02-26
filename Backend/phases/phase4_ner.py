@@ -9,7 +9,7 @@ import re
 from typing import List, Dict
 import google.generativeai as genai
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key="AIzaSyBW6drEIITG0GEnLSJLH2fPkhS2Gb2_x-w")
 
 
 def extract_entities(english_text: str) -> Dict:

@@ -8,7 +8,7 @@ import google.generativeai as genai
 from typing import List, Dict
 import asyncio
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key="AIzaSyBW6drEIITG0GEnLSJLH2fPkhS2Gb2_x-w")
 
 
 async def translate_page(page: Dict, model) -> Dict:

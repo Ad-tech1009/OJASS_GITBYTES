@@ -1,0 +1,217 @@
+{
+  "id": "f2b5b9c0",
+  "filename": "case2.pdf",
+  "status": "completed",
+  "stages": [
+    {
+      "name": "upload",
+      "status": "completed",
+      "message": "File uploaded"
+    },
+    {
+      "name": "extract",
+      "status": "completed",
+      "message": "Extracted 2 pages"
+    },
+    {
+      "name": "translate",
+      "status": "completed",
+      "message": "Translated 2 pages"
+    },
+    {
+      "name": "analyze",
+      "status": "completed",
+      "message": "Analysis complete"
+    },
+    {
+      "name": "format",
+      "status": "completed",
+      "message": "Found 44 entities"
+    }
+  ],
+  "created_at": "2026-02-26T14:51:52.991768",
+  "result": {
+    "Output_A": {
+      "FIR_number": "999/2020",
+      "FIR_date": "12/07/2020",
+      "Police_Station": "GHI",
+      "Accused_Victim_names": {
+        "Complainant_Victim": "XYZ (Age 28, S/o ABC, R/o DEF, P.S. GHI, Dist JKL)",
+        "Accused": "Unknown thieves"
+      },
+      "Incident_facts": "On 12/07/2020, complainant XYZ discovered a theft at his mobile shop 'Maa Saraswati Telecom' located at LC 14 Railway Gate, near ZZ Bazaar. He had closed the shop at 8 PM the previous night (11/07/2020) and found it ransacked when he opened it at 9 AM on 12/07/2020. Entry was gained by opening the asbestos sheet of the roof. Stolen items include Rs. 8000 cash, two new mobile phones (with specified IMEI numbers), and five old mobile phones given by customers for repair.",
+      "Legal_Sections": "Sections 379/461 IPC"
+    },
+    "Output_B": {
+      "crime_type": "theft_robbery"
+    },
+    "Output_C": {
+      "theft_robbery": {
+        "FIR number and date": "✅ PRESENT - FIR No. 999/2020, dated 12/07/2020.",
+        "Police station name": "✅ PRESENT - GHI Police Station.",
+        "Place and time of occurrence": "✅ PRESENT - LC 14 Railway Gate, near ZZ Bazaar, Date-12/07/2020 (incident occurred between 8 PM 11/07/2020 and 9 AM 12/07/2020).",
+        "Details of complainant and accused": "✅ PRESENT - Complainant: XYZ, Age- 28, Father- ABC, Village- DEF, P.S.- GHI, District- JKL. Accused: Unknown thieves.",
+        "Description of stolen property and value": "✅ PRESENT - Rs. 8000 cash, two new mobile phones (IMEI No. 000000000000000 & 111111111111111, and 222222222222222 & 333333333333333), and five old mobile phones given for repair.",
+        "Recovery/seizure memo of property": "❌ MISSING - No recovery or seizure of stolen property is mentioned.",
+        "Witness statements": "✅ PRESENT - Statements from Complainant XYZ (re-statement) and incident site witness AAA (complainant's brother) are recorded.",
+        "Site plan / spot inspection memo": "✅ PRESENT - Detailed description of the incident site, including location relative to police station, shop layout, surrounding businesses, method of entry (asbestos roof), and geographic coordinates (latitude/longitude).",
+        "Arrest memo (if arrested)": "❌ MISSING - Accused are unknown, and no arrest is mentioned.",
+        "Chain of custody of recovered items": "❌ MISSING - No items were recovered, hence no chain of custody."
+      }
+    },
+    "Output_D": {
+      "PERSON": [
+        {
+          "text": "XYZ",
+          "role": "VICTIM"
+        },
+        {
+          "text": "unknown thieves",
+          "role": "ACCUSED"
+        },
+        {
+          "text": "P.S.I. BKC",
+          "role": "OFFICER"
+        },
+        {
+          "text": "The Station House Officer",
+          "role": "OFFICER"
+        },
+        {
+          "text": "BKC",
+          "role": "OFFICER"
+        },
+        {
+          "text": "AAA",
+          "role": "WITNESS"
+        }
+      ],
+      "LEGAL_SECTION": [
+        {
+          "text": "Sections 379/461 IPC"
+        },
+        {
+          "text": "U/S-461/379 IPC"
+        }
+      ],
+      "DATE_TIME": [
+        {
+          "text": "12/07/2020",
+          "role": "FIR_DATE"
+        },
+        {
+          "text": "12/07/2020",
+          "role": "OCCURRENCE_DATE"
+        },
+        {
+          "text": "12/07/2020, 14:35 hours"
+        },
+        {
+          "text": "8 PM"
+        },
+        {
+          "text": "9 AM"
+        },
+        {
+          "text": "06/07/2020"
+        },
+        {
+          "text": "15:00 hrs"
+        },
+        {
+          "text": "15:20 hrs"
+        },
+        {
+          "text": "12/07/2020"
+        },
+        {
+          "text": "09:00 AM"
+        },
+        {
+          "text": "08:00 PM"
+        },
+        {
+          "text": "09:30 AM"
+        }
+      ],
+      "LOCATION": [
+        {
+          "text": "Police Station GHI"
+        },
+        {
+          "text": "JKL"
+        },
+        {
+          "text": "LC 14 Railway Gate"
+        },
+        {
+          "text": "ZZ Bazaar"
+        },
+        {
+          "text": "GHI Police Station"
+        },
+        {
+          "text": "DEF"
+        },
+        {
+          "text": "GHI"
+        },
+        {
+          "text": "Maa Saraswati Telecom"
+        },
+        {
+          "text": "Railway Gate"
+        },
+        {
+          "text": "SAI COMMUNICATION shop"
+        },
+        {
+          "text": "GHI P.S."
+        },
+        {
+          "text": "L.C. 14 Railway Gate"
+        },
+        {
+          "text": "Sai Communication"
+        },
+        {
+          "text": "Ramraha"
+        },
+        {
+          "text": "YYY"
+        }
+      ],
+      "DOCUMENT": [
+        {
+          "text": "999/2020"
+        },
+        {
+          "text": "FIR (1)"
+        },
+        {
+          "text": "written application"
+        },
+        {
+          "text": "69/2020"
+        },
+        {
+          "text": "bill"
+        },
+        {
+          "text": "GHI P.S. Case No: -999/2020"
+        },
+        {
+          "text": "FIR"
+        }
+      ],
+      "AMOUNT": [
+        {
+          "text": "Rs. 8000 (eight thousand rupees)"
+        },
+        {
+          "text": "8000 rupees"
+        }
+      ]
+    }
+  }
+}

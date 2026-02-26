@@ -1,0 +1,186 @@
+{
+  "id": "7e09b5f8",
+  "filename": "case2.pdf",
+  "status": "completed",
+  "stages": [
+    {
+      "name": "upload",
+      "status": "completed",
+      "message": "File uploaded"
+    },
+    {
+      "name": "extract",
+      "status": "completed",
+      "message": "Extracted 2 pages"
+    },
+    {
+      "name": "translate",
+      "status": "completed",
+      "message": "Translated 2 pages"
+    },
+    {
+      "name": "analyze",
+      "status": "completed",
+      "message": "Analysis complete"
+    },
+    {
+      "name": "format",
+      "status": "completed",
+      "message": "Found 34 entities"
+    }
+  ],
+  "created_at": "2026-02-26T16:05:33.329519",
+  "result": {
+    "Output_A": {
+      "FIR_number": "999/2020",
+      "FIR_date": "12/07/2020",
+      "Police_Station": "GHI",
+      "Accused_Victim_names": {
+        "Complainant": "XYZ, aged 28 years, S/o ABC, R/o DEF, Police Station GHI, District JKL",
+        "Accused": "Unknown thieves"
+      },
+      "Incident_facts": "The complainant, XYZ, discovered a theft at his mobile shop, 'Maa Saraswati Telecom', located at LC 14 Railway Park, near ZZ Market, on 12/07/2020 around 9:00 AM/9:30 AM. Thieves gained entry by opening the asbestos roof. Stolen items include Rs. 8000 in cash, two new mobile phones (IMEI: 000000000000000, 111111111111111, 222222222222222, 333333333333333), and five old mobile phones given for repair.",
+      "Legal_Sections": "Sections 379/461 IPC"
+    },
+    "Output_B": {
+      "crime_type": "theft_robbery"
+    },
+    "Output_C": {
+      "FIR number and date": "✅ PRESENT: FIR No. 999/2020, dated 12/07/2020",
+      "Police station name": "✅ PRESENT: GHI Police Station",
+      "Place and time of occurrence": "✅ PRESENT: Dated 12/07/2020, discovered around 09:00 AM/09:30 AM at Maa Saraswati Telecom shop, LC 14 Railway Park, near ZZ Market, ZZ Bazaar.",
+      "Details of complainant and accused": "✅ PRESENT: Complainant XYZ, aged 28, S/o ABC, R/o DEF, PS GHI, District JKL. Accused are unknown thieves.",
+      "Description of stolen property and value": "✅ PRESENT: Cash Rs. 8000, two new mobile phones (IMEI: 000000000000000, 111111111111111, 222222222222222, 333333333333333 with bill), five old mobile phones given for repair.",
+      "Recovery/seizure memo of property": "❌ MISSING",
+      "Witness statements": "✅ PRESENT: Complainant XYZ (re-statement) and eyewitness AAA's statement are recorded.",
+      "Site plan / spot inspection memo": "✅ PRESENT: Detailed inspection of the crime scene including description of the shop, surrounding area, directions, Latitude and Longitude is provided.",
+      "Arrest memo (if arrested)": "❌ MISSING",
+      "Chain of custody of recovered items": "❌ MISSING"
+    },
+    "Output_D": {
+      "PERSON": [
+        {
+          "text": "XYZ",
+          "role": "VICTIM"
+        },
+        {
+          "text": "unknown thieves",
+          "role": "ACCUSED"
+        },
+        {
+          "text": "Police Sub-Inspector BKC",
+          "role": "OFFICER"
+        },
+        {
+          "text": "AAA",
+          "role": "WITNESS"
+        }
+      ],
+      "LEGAL_SECTION": [
+        {
+          "text": "Sections 379/461 IPC"
+        },
+        {
+          "text": "U/S-461/379 IPC"
+        }
+      ],
+      "DATE_TIME": [
+        {
+          "text": "12/07/2020",
+          "role": "FIR_DATE"
+        },
+        {
+          "text": "12/07/2020",
+          "role": "OCCURRENCE_DATE"
+        },
+        {
+          "text": "12/07/2020 14:35 hrs"
+        },
+        {
+          "text": "12/07/2020"
+        },
+        {
+          "text": "8 PM"
+        },
+        {
+          "text": "12/07/2020, 9 AM",
+          "role": "OCCURRENCE_DATE"
+        },
+        {
+          "text": "06/07/2020"
+        },
+        {
+          "text": "dt-12/07/2020",
+          "role": "FIR_DATE"
+        },
+        {
+          "text": "15:00"
+        },
+        {
+          "text": "15:20"
+        },
+        {
+          "text": "Today, dated 12/07/2020, around 09:30 AM",
+          "role": "OCCURRENCE_DATE"
+        }
+      ],
+      "LOCATION": [
+        {
+          "text": "GHI"
+        },
+        {
+          "text": "JKL"
+        },
+        {
+          "text": "LC 14 Railway Park, near ZZ Market"
+        },
+        {
+          "text": "GHI Police Station"
+        },
+        {
+          "text": "village DEF"
+        },
+        {
+          "text": "Railway Gate"
+        },
+        {
+          "text": "L.C. 14 Railway Gate, ZZ Bazaar"
+        },
+        {
+          "text": "Sai Communication P.O.- Ramraja, YYY"
+        }
+      ],
+      "DOCUMENT": [
+        {
+          "text": "Police Head Form No. 30A Schedule 47"
+        },
+        {
+          "text": "Form No. 120A Case Diary No. 01"
+        },
+        {
+          "text": "Special Report Case No."
+        },
+        {
+          "text": "First Information Report No. 999/2020"
+        },
+        {
+          "text": "written application"
+        },
+        {
+          "text": "bill"
+        },
+        {
+          "text": "FIR"
+        }
+      ],
+      "AMOUNT": [
+        {
+          "text": "Rs. 8000"
+        },
+        {
+          "text": "8000 rupees"
+        }
+      ]
+    }
+  }
+}
